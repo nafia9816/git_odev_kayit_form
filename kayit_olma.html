@@ -6,80 +6,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 </head>
+<style>
+        body{
+            background-color: #FFE4E1;
+
+        }
+        h2 {font-family:"Times New Roman",Times,serif;
+            color:#808080;}
+        h4{ font-family: "italic"; 
+            color:#808080}
+
+    </style>
 <body>
 <div class="container pb-5">
-    <h2>YENİ KULLANICI</h2>
+    <h2>YENİ KULLANICI  KAYIT FORMU</h2>
     <hr />
-
-
-    @using (Html.BeginForm())
-    {
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SurName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SurName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SurName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.RePassword, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.RePassword, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RePassword, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Kullanıcı Oluştur" class="btn btn-primary" />
-
-
-
-            </div>
-        </div>
+    <h4> Hoşgeldiniz...</h4>
+     <form>
+       <div class="row">
+         <div class="col">
+           <input type="text" class="form-control" placeholder="Adınız">
+      </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Soyadınız">
     </div>
-    }
+   </div>
+
+   <div class="row mt-5">
+         <div class="col">
+           <input type="email" class="form-control" placeholder="email adresiniz">
+      </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Şifreniz">
+    </div>
+
+  </div>
+  <div class="row mt-5 float-right">
+    <input type="Submit" name="kaydet" class="btn btn-light" value="Kaydol">
+</div>
+    
+</form>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    
+
+    
 
 
 </div>
