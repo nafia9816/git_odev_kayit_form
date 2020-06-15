@@ -22,24 +22,30 @@
     <h2>YENİ KULLANICI  KAYIT FORMU</h2>
     <hr />
     <h4> Hoşgeldiniz...</h4>
-     <form>
+     <form action="ekle.php" method="POST">
        <div class="row">
          <div class="col">
-           <input type="text" class="form-control" placeholder="Adınız">
+           <input type="text" class="form-control" name=" UserName" placeholder="Adınız">
       </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Soyadınız">
+      <input type="text" class="form-control" name="SurName"placeholder="Soyadınız">
     </div>
    </div>
 
    <div class="row mt-5">
          <div class="col">
-           <input type="email" class="form-control" placeholder="email adresiniz">
+           <input type="email" class="form-control" name="Email" placeholder="email adresiniz">
       </div>
-    <div class="col">
-      <input type="password" class="form-control" placeholder="Şifreniz">
-    </div>
+   
 
+  </div>
+  <div class="row mt-5">
+     <div class="col">
+      <input type="password" class="form-control" name="Password" placeholder="Şifreniz">
+    </div>
+     <div class="col">
+      <input type="password" class="form-control" name="RePassword" placeholder="Şifreniz Tekar">
+    </div>
   </div>
   <div class="row mt-5 float-right">
     <input type="Submit" name="kaydet" class="btn btn-light" value="Kaydol">
