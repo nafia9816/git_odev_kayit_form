@@ -7,7 +7,7 @@ $Email=$_POST['Email'];
 $Password=md5($_POST['Password']);
 $RePassword=md5($_POST['RePassword']);
 
-$sunucu="localhost";
+$sunucu="127.0.0.1:3307";
 $user="root";
 $sifre="root";
 $veritabani="users";
@@ -18,7 +18,7 @@ if($baglanti->connect_error){
 	die("Hata: ".$baglanti->connect_error);
 }
 
-$sql="INSERT INTO register(Ad,Soyad,Email,Sifre,SifreTekrar) values ('$UserName','SurName','Email','Password','RePassword')";
+$sql="INSERT INTO register(Ad,Soyad,Email,Sifre,SifreTekrar) values ('$UserName','$SurName','$Email','$Password','$RePassword')";
 
 if($baglanti->query($sql)===TRUE){
 	echo "kayıt başarılı!";
