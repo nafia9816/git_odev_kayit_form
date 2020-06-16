@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $UserName=$_POST['UserName'];
 $SurName=$_POST['SurName'];
@@ -11,21 +12,21 @@ $user="root";
 $sifre="root";
 $veritabani="users";
 
-$baglan=new mysqli($sunucu,$user,$sifre,$veritabani);
+$baglanti=new mysqli($sunucu,$user,$sifre,$veritabani);
 
-if($baglan->connect_error){
-	die("Hata: ".$baglan->connect_error);
+if($baglanti->connect_error){
+	die("Hata: ".$baglanti->connect_error);
 }
 
-$sql="INSERT INTO Register(Ad,Soyad,Email,Sifre,SifreTekrar) values ('$UserName','SurName','Email','Password','RePassword')";
+$sql="INSERT INTO register(Ad,Soyad,Email,Sifre,SifreTekrar) values ('$UserName','SurName','Email','Password','RePassword')";
 
-if($baglan->query($sql)===TRUE){
+if($baglanti->query($sql)===TRUE){
 	echo "kayıt başarılı!";
 }
 else{
-	echo "kayıt başarısız:".$baglan->connect_error;
+	echo "kayıt başarısız:".$baglanti->connect_error;
 }
-$baglan->close();
+$baglanti->close();
 
 
 
